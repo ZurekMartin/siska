@@ -713,4 +713,11 @@ body {
   .project-card {
     height: auto;
   }
+
+  .hero-badge {
+    position: relative;
+    bottom: auto;
+    margin-top: 2rem;
+    z-index: 10;
+  }
 } 
