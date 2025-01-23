@@ -242,9 +242,9 @@ body {
 .service-card {
   background: white;
   padding: 1.5rem;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
@@ -279,10 +279,12 @@ body {
 .project-card {
   position: relative;
   height: 300px;
-  width: 300px;
-  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
   overflow: hidden;
-  group-hover: scale-110;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
@@ -292,14 +294,15 @@ body {
   object-fit: cover;
 }
 
-.project-card:hover .project-image {
-  transform: scale(1.1);
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -316,20 +319,34 @@ body {
   color: white;
 }
 
+.project-overlay h3, .project-overlay p {
+  margin: 0;
+  color: white;
+}
+
 /* Vylepšené styly pro team sekci */
+.team {
+    padding: 6rem 0;
+}
+
 .team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .team-member {
-  text-align: center;
-  transition: transform 0.3s;
+    text-align: center;
+    transition: transform 0.3s;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .team-member:hover {
-  transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
 }
 
 .member-image {
@@ -689,4 +706,11 @@ body {
     padding-top: 1.5rem;
     text-align: center;
     color: rgba(255,255,255,0.7);
+}
+
+/* Zajištění responzivity */
+@media (max-width: 768px) {
+  .project-card {
+    height: auto;
+  }
 } 
