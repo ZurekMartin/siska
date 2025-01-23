@@ -2,20 +2,160 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply text-gray-900 bg-slate-50;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .nav-link {
+    @apply text-gray-600 hover:text-blue-900 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all hover:after:w-full;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-center mb-16 text-blue-900 relative;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-900;
+  }
+
+  .card {
+    @apply bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg 
+    font-semibold shadow-lg hover:shadow-xl transition-all duration-300 
+    hover:translate-y-[-2px];
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 
+    rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 
+    hover:translate-y-[-2px];
+  }
+
+  .card {
+    @apply bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-sm hover:shadow-xl 
+    transition-all duration-300 border border-gray-100 hover:border-blue-100;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-center mb-16 text-blue-900 relative
+    after:content-[''] after:absolute after:bottom-[-16px] after:left-1/2 
+    after:transform after:-translate-x-1/2 after:w-24 after:h-1 
+    after:bg-gradient-to-r after:from-blue-900 after:to-blue-700;
+  }
+}
+
+/* Enhanced Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Glass Morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Přidejte nové animace */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Vylepšené přechody pro navigaci */
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-[-2px] left-0 w-0 h-0.5 bg-gradient-to-r from-blue-900 
+  to-blue-700 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
 }
