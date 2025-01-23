@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Renovations</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigace -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <img src="/img/logo.jpg" alt="Elite Renovations Logo" class="nav-logo">
+                <span class="nav-title">Elite Renovations</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="btn-quote">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero sekce -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="dashboard.jpg" alt="Luxury Home Renovation">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-heading">Transform Your Space</h1>
+                <p class="hero-description">
+                    Award-winning luxury renovation specialists with over two decades of excellence
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Start Your Project</a>
+                    <a href="#projects" class="btn-secondary">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-badge">
+            <div class="badge-content">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lZGFsIj48cGF0aCBkPSJNNy4yMSAxNSAyLjY2IDcuMTRhMiAyIDAgMCAxIC4xMy0yLjJMNC40IDIuOEEyIDIgMCAwIDEgNiAyaDEyYTIgMiAwIDAgMSAxLjYuOGwxLjYgMi4xNGEyIDIgMCAwIDEgLjE0IDIuMkwxNi43OSAxNSIvPjxwYXRoIGQ9Ik0xMSAxMiA1LjEyIDIuMiIvPjxwYXRoIGQ9Im0xMyAxMiA1Ljg4LTkuOCIvPjxwYXRoIGQ9Ik04IDdoOCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTciIHI9IjUiLz48cGF0aCBkPSJNMTIgMTh2LTJoLS41Ii8+PC9zdmc+" alt="Medal Icon" class="icon-medal">
+                <div>
+                    <p class="badge-title">Licensed & Certified</p>
+                    <p class="badge-subtitle">Renovation Experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About sekce -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-heading">About Us</h2>
+            <p class="about-text">
+                We are a team of renovation experts specializing in transforming residential and commercial spaces. 
+                Our passion for design and quality sets us apart from the rest. With over twenty years of experience in the field, we take pride in providing our clients with top-notch services.
+            </p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3 class="about-card-title">Our Mission</h3>
+                    <p class="about-card-text">
+                        Our mission is to transform spaces to reflect the unique needs and desires of our clients. 
+                        We believe that every project is an opportunity to create something exceptional.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-card-title">Our Values</h3>
+                    <ul class="about-list">
+                        <li><strong>Innovation:</strong> We constantly seek new and creative ways to enhance our services.</li>
+                        <li><strong>Quality:</strong> Our work is always carried out to the highest standards of quality.</li>
+                        <li><strong>Customer Satisfaction:</strong> Your satisfaction is our top priority.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services sekce -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-heading">Our Premium Services</h2>
+            
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="residential">Residential</button>
+                <button class="tab-btn" data-tab="commercial">Commercial</button>
+            </div>
+
+            <div class="services-grid" id="services-grid">
+                <!-- Služby budou dynamicky přidávány pomocí JavaScriptu -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects sekce s kompletními projekty -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-heading">Our Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="renovation1.jpg" alt="Riverside Villa">
+                        <div class="project-overlay">
+                            <h3>Riverside Villa</h3>
+                            <p>Complete Renovation</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span>Duration</span>
+                                    <span>8 months</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Area</span>
+                                    <span>450m²</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Budget</span>
+                                    <span>Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="renovation2.jpg" alt="Downtown Loft">
+                        <div class="project-overlay">
+                            <h3>Downtown Loft</h3>
+                            <p>Interior Design</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span>Duration</span>
+                                    <span>4 months</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Area</span>
+                                    <span>180m²</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Budget</span>
+                                    <span>Standard</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="dashboard.jpg" alt="Green Valley House">
+                        <div class="project-overlay">
+                            <h3>Green Valley House</h3>
+                            <p>New Construction</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span>Duration</span>
+                                    <span>12 months</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Area</span>
+                                    <span>320m²</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Budget</span>
+                                    <span>Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team sekce s kompletním týmem -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-heading">Meet Our Expert Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="profile.jpg" alt="John Anderson">
+                    </div>
+                    <h3>John Anderson</h3>
+                    <p class="member-role">Lead Architect</p>
+                    <p class="member-bio">20+ years of experience in luxury home design</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="profile.jpg" alt="Sarah Williams">
+                    </div>
+                    <h3>Sarah Williams</h3>
+                    <p class="member-role">Interior Designer</p>
+                    <p class="member-bio">Expert in modern and minimalist design</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="profile.jpg" alt="Michael Brown">
+                    </div>
+                    <h3>Michael Brown</h3>
+                    <p class="member-role">Project Manager</p>
+                    <p class="member-bio">15+ years of project management experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact sekce s kompletním formulářem -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-heading">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <i class="icon-phone"></i>
+                            <div>
+                                <p class="label">Call Us</p>
+                                <p>+420 777 888 999</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="icon-mail"></i>
+                            <div>
+                                <p class="label">Email Us</p>
+                                <p>info@eliterenovations.cz</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="icon-map"></i>
+                            <div>
+                                <p class="label">Visit Us</p>
+                                <p>Wenceslas Square 1, 110 00 Prague 1</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="icon-clock"></i>
+                            <div>
+                                <p class="label">Working Hours</p>
+                                <p>Mon - Fri: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer s kompletními informacemi -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Elite Renovations</h3>
+                    <p>Creating exceptional living spaces since 2000.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services#residential">Residential Renovation</a></li>
+                        <li><a href="#services#commercial">Commercial Renovation</a></li>
+                        <li><a href="#services#interior">Interior Design</a></li>
+                        <li><a href="#services#exteriors">Exteriors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>Phone: +420 777 888 999</p>
+                    <p>Email: <a href="mailto:info@eliterenovations.cz">info@eliterenovations.cz</a></p>
+                    <p>Address: Wenceslas Square 1, 110 00 Prague 1</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Elite Renovations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
